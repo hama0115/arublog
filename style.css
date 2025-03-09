@@ -226,6 +226,28 @@ img {
   .header {
     position: static;
   }
+  .header-logo {
+    font-size: 1.5rem;
+  }
+  .btn-menu {
+    display: none;
+  }
+  .site-menu {
+    /* SP時のCSSを変更 */
+    position: static;
+    color: #000;
+    background-color: #fff;
+    width: auto;
+  }
+  .site-menu ul {
+    display: flex;
+  }
+  .site-menu ul li {
+    margin: 0 2em;
+  }
+  .site-menu ul li a {
+    white-space: nowrap;
+  }
 
   /* ========================
   メイン
