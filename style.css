@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+/* SPファーストで記述 */
+
+/* ========================
+全体
+======================== */
+
+/*
+リセットCSSで変わっていない部分をリセット
+およびフォントなど全体に関わる部分を変更
+ */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: dnp-shuei-gothic-gin-std, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.article-title {
+  font-family: dnp-shuei-gothic-gin-std, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ========================
+ヘッダー
+======================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  background-color: #fff;
+}
+
+.header-inner {
+  position: relative;
+  height: 70px;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  display: inline-block;
+  color: #A0D8EF;
+}
+.btn-menu {
+  display: block;
+  width: 44px;
+  height: 34px;
+  background-image: url(./img/icon-menu.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: solid 2px #000;
+  border-radius: 0;
+  outline: none;
+}
+.site-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  background-color: #A0D8EF;
+  overflow-x: hidden;
+  width: 0;
+  transition-duration: 0.5s;
+}
+.site-menu.open-menu {
+  width: 100%;
+}
+.site-menu ul li {
+  margin: 2rem 0;
+}
+.site-menu ul li a {
+  white-space: nowrap;
+}
+
+
+/* ========================
+メイン
+======================== */
+.main {
+  padding: 70px 20px 2rem;
+}
+/* コンテンツをはみ出ないようにする、および中央揃えに */
+.content-wrapper {
+  width: clamp(335px, 85%, 1000px);
+  margin: auto;
+}
+
+/*---- アーカイブページ ----*/
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.text {
+  padding: 0.75rem 0 2rem;
+}
+.date {
+  font-size: 0.75rem;
+  margin: 0 0 0 1em;
+  color: #d4d4d4;
+}
+.article-title {
+  font-size: 1rem;
+  margin-top: 0.67em;
+}
+.category-list {
+  display: flex;
+  margin-top: 1.33em;
+}
+.category {
+  font-size: 0.625rem;
+  margin-left: 1em;
+  padding: 0.5em 1em;
+  border: solid 1px #A0D8EF;
+  border-radius: 20px;
+  color: #A0D8EF;
+  font-weight: 400;
+}
+
+/*-- プロフィール欄 --*/
+
+.profile-top {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.profile-img-area {
+  text-align: center;
+  position: relative;
+}
+.profile-img-area img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+.profile-img-area p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 0 1em;
+  background-color: #fff;
+  border: solid 1px #000;
+}
+.profile-description {
+  margin-top: 1em;
+  line-height: 2;
+}
+
+/*-- 個別投稿ページ --*/
+
+/* ========================
+フッター
+======================== */
+.footer {
+  text-align: center;
+  padding: 3rem 0 1rem;
+  color: #fff;
+  background-color: #A0D8EF;
+}
+.footer a {
+  font-size: 1.5rem;
+}
+.copyright {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+
+  /* ========================
+  全体
+  ======================== */
+
+  /* ========================
+  ヘッダー
+  ======================== */
+  .header {
+    position: static;
+  }
+
+  /* ========================
+  メイン
+  ======================== */
+  .main {
+    padding: 0 0 2rem;
+  }
+
+  /*---- アーカイブページ ----*/
+  .title {
+    margin: 2rem 0 1rem;
+  }
+
+  .article-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .article-list li {
+    flex-shrink: 0;
+    width: calc((100% - 100px) / 3);
+  }
+
+}
