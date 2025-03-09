@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-/* SPファーストで記述 */
+/* SPファーストで記述
+    marginは基本はtopにかけるが、デザインの都合上ボトムにかけたい場合は「margin-bottom」を使う
+*/
 
 /* ========================
 全体
@@ -139,7 +141,7 @@ img {
 .text {
   padding: 0.75rem 0 2rem;
 }
-.date {
+.entry-date {
   font-size: 0.75rem;
   margin: 0 0 0 1em;
   color: #d4d4d4;
@@ -154,12 +156,14 @@ img {
 }
 .category {
   font-size: 0.625rem;
-  margin-left: 1em;
   padding: 0.5em 1em;
   border: solid 1px #A0D8EF;
   border-radius: 20px;
   color: #A0D8EF;
   font-weight: 400;
+}
+.category-list p:not(.category-list p:first-child) {
+  margin-left: 1em;
 }
 
 /*-- プロフィール欄 --*/
@@ -196,6 +200,78 @@ img {
 }
 
 /*-- 個別投稿ページ --*/
+
+.article-title {
+  font-size: 1.25rem;
+  margin-top: 1em;
+}
+.single-article .entry-date {
+  margin: 1em 0 0 0.5em;
+}
+.single-article .category-list {
+  margin: 0.5em 0 0 0.5em;
+}
+.single-article .category {
+  padding: 0 1em;
+}
+
+.eyecatch-area {
+  padding-top: 1rem;
+}
+
+.article-h2 {
+  font-size: 1.25rem;
+  margin: 3rem 0 1em 0;
+  padding: 0 0 0.6em 1em;
+  border-bottom: solid 1px #A0D8EF;
+}
+.article-h3 {
+  font-size: 1rem;
+  margin: 3em 0 1.5em 0;
+  padding-left: 1em;
+  border-left: solid 2px #A0D8EF;
+}
+.article-p {
+  margin-bottom: 2em;
+}
+.article-img-area img {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.page-link {
+  display: flex;
+  justify-content: space-between;
+}
+.prev-page-link {
+  padding: 0.5em 1em;
+  border: solid 1px #000;
+  border-radius: 20px;
+}
+.prev-page-link::before {
+  content: '<';
+}
+.next-page-link {
+  padding: 0.5em 1em;
+  border: solid 1px #000;
+  border-radius: 20px;
+}
+.next-page-link::after {
+  content: '>';
+}
+
+.latest-pages {
+  padding: 3em 0 1em;
+}
+.latest-pages h2 {
+  font-size: 1rem;
+  margin-bottom: 1.5em;
+  padding-left: 0.5em;
+  border-left: solid 1px #A0D8EF;
+}
+.latest-pages ul li {
+  margin: 0.625em 0.625em 0 1em ;
+}
 
 /* ========================
 フッター
