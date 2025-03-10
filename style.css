@@ -127,7 +127,7 @@ img {
 }
 /* コンテンツをはみ出ないようにする、および中央揃えに */
 .content-wrapper {
-  width: clamp(335px, 85%, 1000px);
+  width: clamp(335px, 85%, 900px);
   margin: auto;
 }
 
@@ -201,7 +201,7 @@ img {
 
 /*-- 個別投稿ページ --*/
 
-.article-title {
+.single-article .article-title {
   font-size: 1.25rem;
   margin-top: 1em;
 }
@@ -263,7 +263,7 @@ img {
 .latest-pages {
   padding: 3em 0 1em;
 }
-.latest-pages h2 {
+.latest-pages-title {
   font-size: 1rem;
   margin-bottom: 1.5em;
   padding-left: 0.5em;
@@ -295,6 +295,15 @@ img {
   /* ========================
   全体
   ======================== */
+
+  /* 基本フォントをPCサイズでは大きく */
+  body {
+    font-size: 18px;
+  }
+
+  .single-article img {
+    max-width: 85%
+  }
 
   /* ========================
   ヘッダー
@@ -345,6 +354,21 @@ img {
   .article-list li {
     flex-shrink: 0;
     width: calc((100% - 100px) / 3);
+  }
+
+  /*---- 個別投稿ページ --*/
+  .single-article .article-title {
+    margin-top: 2em;
+  }
+  .eyecatch-area {
+    text-align: center;
+  }
+  .article-img-area {
+    text-align: center;
+  }
+
+  .latest-pages-title {
+    font-size: 1.2rem;
   }
 
 }
