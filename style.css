@@ -186,7 +186,7 @@ img {
   color: #A0D8EF;
   font-weight: 400;
 }
-.category-list p:not(.category-list p:first-child) {
+.category-list li:not(.category-list li:first-child) {
   margin-left: 1em;
 }
 
