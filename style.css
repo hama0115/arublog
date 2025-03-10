@@ -225,6 +225,7 @@ img {
 
 /*-- 個別投稿ページ --*/
 
+/* タイトルエリア */
 .single-article .article-title {
   font-size: 1.25rem;
   margin-top: 1em;
@@ -239,27 +240,29 @@ img {
   padding: 0 1em;
 }
 
+/* アイキャッチエリア */
 .eyecatch-area {
   padding-top: 1rem;
 }
 
-.article-h2 {
+/* 記事の本文 */
+.article-content h2 {
   font-size: 1.25rem;
   margin: 3rem 0 1em 0;
   padding: 0 0 0.6em 1em;
   border-bottom: solid 1px #A0D8EF;
 }
-.article-h3 {
+.article-content h3 {
   font-size: 1rem;
   margin: 3em 0 1.5em 0;
   padding-left: 1em;
   border-left: solid 2px #A0D8EF;
 }
-.article-p {
+.article-content p {
   margin-bottom: 2em;
 }
-.article-img-area img {
-  display: inline-block;
+.article-content img {
+  display: block;
   margin-bottom: 1rem;
 }
 
@@ -392,8 +395,9 @@ img {
   .eyecatch-area {
     text-align: center;
   }
-  .article-img-area {
-    text-align: center;
+
+  .article-content img {
+    margin: 0 auto 1rem;
   }
 
   .latest-pages-title {
