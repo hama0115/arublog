@@ -233,6 +233,8 @@ img {
 .single-article .entry-date {
   margin: 1em 0 0 0.5em;
 }
+
+/* カテゴリのCSSはアーカイブページのほうでベースを調節しているので注意 */
 .single-article .category-list {
   margin: 0.5em 0 0 0.5em;
 }
@@ -274,6 +276,8 @@ img {
   padding: 0.5em 1em;
   border: solid 1px #000;
   border-radius: 20px;
+  max-width: 200px;
+  text-align: center;
 }
 .prev-page-link::before {
   content: '<';
@@ -282,6 +286,8 @@ img {
   padding: 0.5em 1em;
   border: solid 1px #000;
   border-radius: 20px;
+  max-width: 200px;
+  text-align: center;
 }
 .next-page-link::after {
   content: '>';
