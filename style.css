@@ -8,6 +8,10 @@
 全体
 ======================== */
 
+html {
+  font-size: 16px;
+}
+
 /*
 リセットCSSで変わっていない部分をリセット
 およびフォントなど全体に関わる部分を変更
@@ -40,7 +44,6 @@ body {
   font-family: dnp-shuei-gothic-gin-std, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
   color: #000000;
   line-height: 1.5;
   background-color: #ffffff;
@@ -178,7 +181,7 @@ img {
   display: flex;
   margin-top: 1.33em;
 }
-.category {
+.article-category {
   font-size: 0.625rem;
   padding: 0.5em 1em;
   border: solid 1px #A0D8EF;
@@ -330,7 +333,7 @@ img {
   ======================== */
 
   /* 基本フォントをPCサイズでは大きく */
-  body {
+  html {
     font-size: 18px;
   }
 
