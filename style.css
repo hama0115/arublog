@@ -156,13 +156,13 @@ img {
   display: block;
   overflow: hidden;
 }
-.article-list li a:hover .thumbnail img{
+.article-list li a:hover .thumbnail-area img{
   transform: scale(1.05);
 }
-.thumbnail {
+.thumbnail-area {
   overflow: hidden;
 }
-.thumbnail img {
+.thumbnail-area img {
   transition-duration: 0.3s;
 }
 .text {
@@ -393,7 +393,7 @@ img {
     flex-wrap: wrap;
     gap: 50px;
   }
-  .article-list li {
+  .article-list > li {
     flex-shrink: 0;
     width: calc((100% - 100px) / 3);
   }
